@@ -1,6 +1,16 @@
 {
-  "extends": "./tsconfig.next.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowJs": true,
+    "jsx": "preserve",
+    "noEmit": true,
     "paths": {
       // TODO: Move this to subpath imports once https://github.com/microsoft/TypeScript/issues/52460 is resolved
       "@/*": [
